@@ -5,16 +5,20 @@
       <router-view/>
     </transition>
 
+    <app-svg></app-svg>
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue';
+import Svg from './assets/Svgs.vue';
+
 import axios from 'axios';
 
 export default {
   components: {
-    'app-navigation': Navigation
+    'app-navigation': Navigation,
+    'app-svg': Svg
   },
   created() {
     axios.get('https://children-talk-11.firebaseio.com/posts.json')

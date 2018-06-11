@@ -10,7 +10,7 @@
         <router-link tag="li" class="nav-item" to="/"><a class="nav-link">Home</a></router-link>
         <router-link tag="li" class="nav-item" to="/about"><a class="nav-link">About</a></router-link>
         <router-link tag="li" class="nav-item" to="/profile"><a class="nav-link">Profile</a></router-link>
-        <router-link tag="li" class="nav-item" to="/addPhrase"><a class="nav-link">Add New</a></router-link>
+        <router-link tag="li" class="nav-item" to="/addPhrase"><a class="nav-link">Add New</a> <svg class="i-search"><use xlink:href="#i-pen"></use></svg> </router-link>
 
       </ul>
     </div>
@@ -19,3 +19,12 @@
 <script>
   export default {}
 </script>
+
+<style>
+  [class^="i-"], [class*="i-"] {
+      height: 32px;
+      width: 32px;
+      display: inline-block;
+      fill: currentColor;
+  }
+</style>
