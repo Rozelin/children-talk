@@ -12,6 +12,7 @@
 <script>
 import Navigation from './components/Navigation.vue';
 import Svg from './assets/Svgs.vue';
+import store from './store';
 
 import axios from 'axios';
 
@@ -30,15 +31,20 @@ export default {
           post.id = key;
           posts.push(post);
         }
-        this.$store.commit('createInitialList', posts);
+        this.$store.dispatch('createInitialList', posts);
       })
       .catch((err) => console.log(err));
+
+      this.$store.dispatch('checkForAuthentication');
   }
 }
 
 </script>
 
-<style scoped>
+<style>
+   body { background-color: #752853; }
+   .icon-primary { fill: #E95420 !important; }
+   .icon-base { fill: white; }
   .fade-enter { opacity: 0;  }
   .fade-enter-active { transition: opacity .5s;  }
   .fade-leave {}
